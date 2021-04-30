@@ -1,0 +1,68 @@
+@import "../../index.scss";
+
+.tour {
+    background: $mainGrey;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border-radius: 2%;
+    border: 1px solid $mainGreen;
+    box-shadow: 7px 12px 27px -3px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 7px 12px 27px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 7px 12px 27px -3px rgba(0, 0, 0, 0.75);
+
+    img {
+        width: 100%;
+        display: block;
+        min-height: 13rem;
+        border-radius: 5%;
+        box-shadow: 0px 4px 38px -3px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 0px 4px 38px -3px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 4px 38px -3px rgba(0, 0, 0, 0.75);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .tour {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-column-gap: 1rem;
+    }
+}
+.img-container {
+    position: relative;
+    padding: 1rem 1rem;
+}
+.close-btn {
+    position: absolute;
+    display: block;
+    top: 7%;
+    right: 7%;
+    color: $mainGreen;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: $mainTransition;
+    opacity: 0;
+}
+.img-container:hover .close-btn {
+    opacity: 1;
+}
+.tour-info {
+    padding: 1rem 0.5rem;
+    h3 {
+        text-transform: uppercase;
+        color: $mainGreen;
+    }
+    h4 {
+        text-transform: capitalize;
+        margin: 0.2rem 0 0.6rem 0;
+    }
+    h5 {
+        text-transform: capitalize;
+        span {
+            color: $mainGreen;
+            margin: 0.5rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+    }
+}
